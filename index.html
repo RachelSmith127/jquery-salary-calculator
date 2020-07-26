@@ -8,16 +8,22 @@
     <script type="text/javascript"src="client.js"></script> 
   </head>
   <h1>Salary Calculator</h1>
-  <header id="mic"> 
-
-</header>
   <body>
-    <button id="red">Add Red</button>
-    <button id="yellow">Add Yellow</button>
-    <button id="green">Add Green</button>
-    <button id="blue">Add Blue</button>
-<h2>Employees</h2>
+    <form>
+      <label for="fname"></label><br>
+      <input type="text" placeholder="First Name" id="fname" name="fname"><br>
+      <label for="lname"></label><br>
+      <input type="text" placeholder="Last Name"id="lname" name="lname">
+      <label for="employeeID"></label><br>
+      <input type="text" placeholder="Employee ID" id="employeeID" name="employeeID"><br>
+      <label for="Title"></label><br>
+      <input type="text" placeholder="Title" id="title" name="title">
+      <label for="annualSalary"></label><br>
+      <input type="text" placeholder="Annual Salary" id="annualSalary" name="annualSalary">
+      <button id="submit">Submit</button></td>
+    </form>
     <table> 
+      <caption>Employees:</caption>
         <tr> 
             <th>First Name</th>
             <th>Last Name</th>
@@ -47,6 +53,7 @@
             <td>4567</td>
             <td>Project Manager</td>
             <td>$120,000</td>
+            <td><button id="delete">Delete</button></td>
         </tr>
         <tr>  
           <td>Amelie</td>
@@ -54,9 +61,8 @@
           <td>5912</td>
           <td>General Manager</td>
           <td>$160,000</td>
+          <td><button id="delete">Delete</button></td>
       </tr>
-
-           </table> 
     </table>
    <main>
         <div class="box redBox"></div>
@@ -64,5 +70,8 @@
         <div class="box yellowBox"></div>
         <div class="box blueBox"></div>
    </main>
+   <footer>
+      <h4>Total Monthly:</h4>
+   </footer>
   </body>
 </html>
