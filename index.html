@@ -9,28 +9,23 @@
   </head>
   <h1>Salary Calculator</h1>
   <body>
-    <form>
-      <label for="fname"></label><br>
-      <input type="text" placeholder="First Name" id="fname" name="fname"><br>
-      <label for="lname"></label><br>
-      <input type="text" placeholder="Last Name"id="lname" name="lname">
-      <label for="employeeID"></label><br>
-      <input type="text" placeholder="Employee ID" id="employeeID" name="employeeID"><br>
-      <label for="Title"></label><br>
-      <input type="text" placeholder="Title" id="title" name="title">
-      <label for="annualSalary"></label><br>
-      <input type="text" placeholder="Annual Salary" id="annualSalary" name="annualSalary">
-      <button id="submit">Submit</button></td>
-    </form>
-    <table> 
-      <caption>Employees:</caption>
-        <tr> 
+    <table id="submitInformation"> 
+      <td><input type="text" placeholder="First Name" id="fname" name="fname"></td>
+      <td><input type="text" placeholder="Last Name"id="lname" name="lname"></td>
+      <td><input type="text" placeholder="Employee ID" id="employeeID" name="employeeID"></td>
+      <td><input type="text" placeholder="Title" id="title" name="title"></td>
+      <td><input type="text" placeholder="Annual Salary" id="annualSalary" name="annualSalary"></td>
+      <td><button id="submit">Submit</button></td>
+    </table>
+    <caption>Employees:</caption>
+    <table id="salaryTable"> 
+          <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>ID</th>
             <th>Title</th>
             <th>Annual Salary</th>
-        </tr>
+          </tr>
         <tr>
             <td>Sam</td>
             <td>Jones</td>
@@ -64,12 +59,7 @@
           <td><button id="delete">Delete</button></td>
       </tr>
     </table>
-   <main>
-        <div class="box redBox"></div>
-        <div class="box greenBox"></div>
-        <div class="box yellowBox"></div>
-        <div class="box blueBox"></div>
-   </main>
+    
    <footer>
       <h4>Total Monthly:</h4>
    </footer>
