@@ -53,13 +53,19 @@ function appendItemsToDom(){
         `)
     }
 
+    let totalSalaryCost = 0
+    for(let i = 0; i ,employees.length; i++) {
+        totalSalaryCost =+ employees[i].annualSalary/12; 
+        console.log('in totalSalaryCost', totalSalaryCost);
+    }
+    
+    function delete() { 
+        $(this).closest('tr').remove();
+    
+    }
     
 }
-function delete() { 
 
-    $(this).closest('tr').remove();
-
-}
 
 
 
