@@ -10,15 +10,15 @@
   <h1>Salary Calculator</h1>
   <body>
     <table id="submitInformation"> 
-      <td><input type="text" placeholder="First Name" id="fname" name="fname"></td>
-      <td><input type="text" placeholder="Last Name"id="lname" name="lname"></td>
+      <td><input type="text" placeholder="First Name" id="firstName" name="firstName"></td>
+      <td><input type="text" placeholder="Last Name"id="lastName" name="lastName"></td>
       <td><input type="text" placeholder="Employee ID" id="employeeID" name="employeeID"></td>
       <td><input type="text" placeholder="Title" id="title" name="title"></td>
       <td><input type="text" placeholder="Annual Salary" id="annualSalary" name="annualSalary"></td>
-      <td><button id="submit">Submit</button></td>
+      <td><button id="addBtn">Submit</button></td>
     </table>
     <caption>Employees:</caption>
-    <table id="salaryTable"> 
+    <table> 
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
@@ -26,6 +26,10 @@
             <th>Title</th>
             <th>Annual Salary</th>
           </tr>
+          <tr id= "salaryTable">
+            <td> </td>
+          </tr>
+
         <tr>
             <td>Sam</td>
             <td>Jones</td>

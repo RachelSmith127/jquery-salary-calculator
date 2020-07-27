@@ -1,73 +1,77 @@
+
 console.log('Js is working guys!')
 
-$(document).ready(function(){
-    // console.log('working')
-    // $('#salaryTable.delete').click(function(){
-    //     console.log('working')
-    //     $(this).closest('tr').remove();
+$(document).ready(handleReady);
+
+let info = [];
+
+function handleReady(){
+    console.log('jquery is running!');
+
+    $('#addBtn').on('click', addItem);
+    $('#salaryTable').on('click', ".deleteBtn", addItem);
+}
+
+function addItem(){ 
+    console.log('clicked!'); 
+    let submitItem = {
+    firstName : $('#firstName').val(),
+    lastName : $('#lastName').val(),
+    employeeID : $('#employeeID').val(),
+    title : $('#title').val(),
+    annualSalary : $('#annualSalary').val()
+
+ 
+}
+    console.log(submitItem);
+
+    info.push(submitItem);
+
+    appendItemsToDom();
+
+    $('#firstName').val(''),
+    $('#lastName').val(''),
+    $('#employeeID').val(''),
+    $('#title').val(''),
+    $('#annualSalary').val('')
+}
+
+function appendItemsToDom(){
+
+    $('#salaryTable').empty();
+
+    for(let item of info){
+       
+        $('#salaryTable').append(`
+        <tr><td>${item.firstName}</td>
+        <td>${item.lastName}</td>
+        <td>${item.employeeID}</td>
+        <td>${item.title}</td>
+        <td>${item.annualSalary}</td>
+        <td> <button class="deleteBtn">Delete</button> </td></tr>
         
-    // });
-    // $('.submit').on('click',function(){
-    //     //    $("salaryTable").append(<tr><td>+$("#fname").val()+</td><td>+$("#lname").val()+</td><td>+$("#employeeID").val()+</td><td>+$("#title").val()+</td><td>+$("#annualSalary").val()+</td><td><button 
-    //     //    class='delete'> Delete</button></td></tr>);
-
-
-    //     });
-     Function addEmployee(){
-        console.log('Adding Employee');
-        let addEmployee = {
-            firstName: $('#fname').val(),
-            lastName: $('#lname').val(),
-            employeeID: $('#employeeID').val(),
-            Title: $('#title').val()
-            annualSalary: $('#annualSalary').val() 
-        }
-
-        if (addEmployee.firstName === '' || addEmployee.lastName === '' || addEmployee.employeeID === '' || addEmployee.Title === '' || addEmployee.annualSalary === '') {
-            alert('Enter information in form.')
-        } else { 
-            employees.push(addEmployee);
-
-            addEmployeeToDOM();
-            $('#fname').val(''),
-            $('#lname').val(''),
-            $('#employeeID').val(''),
-            $('#title').val('')
-            $('#annualSalary').val('') 
-
-        }
-        addEmployee();
-
-     }
-
-     Function addEmployeeToDOM() {
-         $('#salaryTable').empty();
-
-    for(let nEmployee of employees){
-
-    
-         $('salaryTable').append(`<tr><
-    <td>${nEmployee.firstName}</td> 
-    <td>${nEmployee.lastName}</td> 
-    <td>${nEmployee.employeeID}</td>
-    <td>${nEmployee.title}</td>
-    <td>${nEmployee.annualSalary}</td>
-    <td> <button class="delete">Delete</button> </td><tr>`)
-     }
-
+        `)
     }
 
-     Function updateMonthlyTotal(){
+    
+}
+function delete() { 
+
+    $(this).closest('tr').remove();
+
+}
 
 
 
 
-     }
-
-     Function deleteEmployeeIntoGrid(){
 
 
 
 
-     }
-});
+
+
+
+
+
+
+
